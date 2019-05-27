@@ -22,13 +22,13 @@ The controller selects architectures according to the difficulty of samples. The
 ## Performance
 InstaNAS consistently improves MobileNetv2 accuracy-latency tradeoff on 4 datasets. We highlight the values that dominates MobileNetv2 1.0. All InstaNAS variants (i.e., A-E or A-C) are obtained in a single search.
 
-<img src="./assets/result.png" width="800px"/>
+<img src="./assets/result.png" width="400px"/>
 
 ## Distribution Visualization
 We project the result architecture distribution to 2D space with UMAP. The result forms multiple clusters and clearly separates high latency arch. (complex samples) from low latency arch. (simple samples).
 
 
-<img src="./assets/umap.png" width="350px"/>
+<img src="./assets/umap.png" width="400px"/>
 
 ## Citation
 Please cite our paper ([link](https://arxiv.org/abs/1811.10201)) 
