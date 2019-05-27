@@ -30,5 +30,16 @@ We project the result architecture distribution to 2D space with UMAP. The resul
 
 <img src="./assets/umap.png" width="350px"/>
 
+## Citation
+Please cite our paper ([link](https://arxiv.org/abs/1811.10201)) 
+in your publications if this repo helps your research:
+
+    @article{cheng2018instanas,
+    title={InstaNAS: Instance-aware Neural Architecture Search},
+    author={Cheng, An-Chieh and Lin, Chieh Hubert and Juan, Da-Cheng and Wei, Wei and Sun, Min},
+    journal={arXiv preprint arXiv:1811.10201},
+    year={2018}
+    }
+
 ### DISCLAIMER
 This is not an official Google product.
