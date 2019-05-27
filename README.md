@@ -3,7 +3,7 @@
 
 InstaNAS is an instance-aware neural architecture search framework that employs a controller trained to search for a distribution of architectures instead of a single architecture.
 
-<img src="./assets/instanas-short.gif" width="1000px"/>
+<img src="./assets/instanas.gif" width="1000px"/>
 
 [InstaNAS: Instance-aware Neural Architecture Search
 ](https://hubert0527.github.io/InstaNAS/)  
