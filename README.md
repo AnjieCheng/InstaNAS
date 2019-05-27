@@ -16,15 +16,19 @@ InstaNAS is an instance-aware neural architecture search framework that employs 
 
 ## Architecture Selection by Difficulty
 The controller selects architectures according to the difficulty of samples. The estimated difficulty matches human perception (e.g., cluttered background, high intra-class variation, illumination conditions).
+
 <img src="./assets/slow_fast.png" width="1000px"/>
 
 ## Performance
 InstaNAS consistently improves MobileNetv2 accuracy-latency tradeoff on 4 datasets. We highlight the values that dominates MobileNetv2 1.0. All InstaNAS variants (i.e., A-E or A-C) are obtained in a single search.
+
 <img src="./assets/result.png" width="800px"/>
 
 ## Distribution Visualization
 We project the result architecture distribution to 2D space with UMAP. The result forms multiple clusters and clearly separates high latency arch. (complex samples) from low latency arch. (simple samples).
-<img src="./assets/umap.png" width="200px"/>
+
+
+<img src="./assets/umap.png" width="350px"/>
 
 ### DISCLAIMER
 This is not an official Google product.
