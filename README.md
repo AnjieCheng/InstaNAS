@@ -24,7 +24,7 @@ InstaNAS consistently improves MobileNetv2 accuracy-latency tradeoff on 4 datase
 
 ## Distribution Visualization
 We project the result architecture distribution to 2D space with UMAP. The result forms multiple clusters and clearly separates high latency arch. (complex samples) from low latency arch. (simple samples).
-<img src="./assets/umap.png" width="1000px"/>
+<img src="./assets/umap.png" width="200px"/>
 
 ### DISCLAIMER
 This is not an official Google product.
