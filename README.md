@@ -20,7 +20,7 @@ For ImageNet dataset, please follow these data processing [steps](https://github
 
 ## Usage
 ### Pretrain Meta-graph
-You can either download our pretrained meta-graph here([CIFAR-10](https://drive.google.com/file/d/1-z2rqfNMMkSPiay1nFiU11R76N3o6JSD/view?usp=sharing), [ImageNet](https://drive.google.com/file/d/1HQj6bqONq1n4hQ-DiDz9QjNMc6nIUexh/view?usp=sharing)) or train from scratch following instructions in [this](https://github.com/felixgwu/img_classification_pk_pytorch) repository. The default path for the meta-graph checkpoint is at `'pretrain/save/`. 
+You can either download our pretrained meta-graph here([CIFAR-10](https://drive.google.com/file/d/1-z2rqfNMMkSPiay1nFiU11R76N3o6JSD/view?usp=sharing), [ImageNet](https://drive.google.com/file/d/1HQj6bqONq1n4hQ-DiDz9QjNMc6nIUexh/view?usp=sharing)) or train from scratch following instructions in [this](https://github.com/felixgwu/img_classification_pk_pytorch) repository. The default path for the meta-graph checkpoint is at `'pretrain/save/`'. 
 ### Search & Finetune
 ```bash
 # Search on CIFAR 10 with pretrained one-shot weights
