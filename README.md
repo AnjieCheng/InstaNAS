@@ -11,9 +11,6 @@ InstaNAS is an instance-aware neural architecture search framework that employs 
  National Tsing Hua University, Google AI  
  In ICML'19 [AutoML Workshop](https://sites.google.com/view/automl2019icml/). (* equal contributions)
 
-## Updates
-* May-2019: Project Page with built-in ImageNet controller released. 
-
 ## Requirements
 * Python 3.6
 * PyTorch 0.4.1
@@ -35,7 +32,7 @@ python finetune.py --model InstaMobile_C10 --cv_dir YOUR_SAVE_DIR --load YOUR_CH
 
 ```bash
 # Search on ImgNet with pretrained one-shot weights
-python cl_training.py --model InstaMobile_ImgNet --cv_dir YOUR_SAVE_DIR --lr 5e-4 --net_lr 0.01 --batch_size 100 --max_epochs 50 --pos_w 30 --neg_w 0
+python search.py --model InstaMobile_ImgNet --cv_dir YOUR_SAVE_DIR --lr 5e-4 --net_lr 0.01 --batch_size 100 --max_epochs 50 --pos_w 30 --neg_w 0
 
 # Finetine on ImgNet
 python finetune.py --model InstaMobile_ImgNet --cv_dir YOUR_SAVE_DIR --load YOUR_CHECKPOINT_PATH --max_epochs 100 --batch_size 250 --auxiliary
@@ -67,6 +64,3 @@ in your publications if this repo helps your research:
     journal={arXiv preprint arXiv:1811.10201},
     year={2018}
     }
-
-### DISCLAIMER
-This is not an official Google product.
