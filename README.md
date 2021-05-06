@@ -11,8 +11,35 @@ InstaNAS is an instance-aware neural architecture search framework that employs 
  National Tsing Hua University, Google AI  
  In ICML'19 [AutoML Workshop](https://sites.google.com/view/automl2019icml/). (* equal contributions)
 
-## Updates (Search code releasing soon)
+## Updates
 * May-2019: Project Page with built-in ImageNet controller released. 
+
+## Requirements
+* Python 3.6
+* PyTorch 0.4.1
+* Torchvision
+
+For ImageNet dataset, please follow these data processing [steps](https://github.com/soumith/imagenet-multiGPU.torch#data-processing) and modified the default data path in `utils.py`. 
+
+## Usage
+### Pretrain Meta-graph
+You can either download our pretrained meta-graph here([CIFAR-10](https://drive.google.com/file/d/1-z2rqfNMMkSPiay1nFiU11R76N3o6JSD/view?usp=sharing), [ImageNet](https://drive.google.com/file/d/1HQj6bqONq1n4hQ-DiDz9QjNMc6nIUexh/view?usp=sharing)) or train from scratch following instructions in [this](https://github.com/felixgwu/img_classification_pk_pytorch) repository. The default path for the meta-graph checkpoint is at `'pretrain/save/`. 
+### Search & Finetune
+```bash
+# Search on CIFAR 10 with pretrained one-shot weights
+python search.py --model InstaMobile_C10 --cv_dir YOUR_SAVE_DIR --lr 5e-4 --batch_size 32 --max_epochs 500 --pos_w 30 --neg_w 0
+
+# Finetine on CIFAR 10
+python finetune.py --model InstaMobile_C10 --cv_dir YOUR_SAVE_DIR --load YOUR_CHECKPOINT_PATH --max_epochs 300 --batch_size 256
+```
+
+```bash
+# Search on ImgNet with pretrained one-shot weights
+python cl_training.py --model InstaMobile_ImgNet --cv_dir YOUR_SAVE_DIR --lr 5e-4 --net_lr 0.01 --batch_size 100 --max_epochs 50 --pos_w 30 --neg_w 0
+
+# Finetine on ImgNet
+python finetune.py --model InstaMobile_ImgNet --cv_dir YOUR_SAVE_DIR --load YOUR_CHECKPOINT_PATH --max_epochs 100 --batch_size 250 --auxiliary
+```
 
 ## Architecture Selection by Difficulty
 The controller selects architectures according to the difficulty of samples. The estimated difficulty matches human perception (e.g., cluttered background, high intra-class variation, illumination conditions).
